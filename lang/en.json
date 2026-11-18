@@ -1,0 +1,168 @@
+{
+  "dnd4e-lootbox": {
+    "dialog": {
+      "title": "Lootbox",
+      "box": "Box",
+      "level": "Box level",
+      "levelOption": "Level {level} — {price}",
+      "oddsLoss": "money-losing",
+      "oddsSell": "profit if sold",
+      "oddsValue": "average value",
+      "offTarget": "The current tables put this box outside the target odds (15–25% loss, 20–30% profit if sold).",
+      "buyer": "Buyer",
+      "buyerLabel": "Character",
+      "noBuyer": "Nobody (chat card only)",
+      "buyerOption": "{name} (L{level}, {gold})",
+      "charge": "Charge the price and add the items to the inventory",
+      "visibility": "Chat card",
+      "open": "Open box ({price})",
+      "opened": "Opened: {count} item(s) worth {value}. {verdict}.",
+      "noTablesTitle": "No lootbox tables yet",
+      "noTablesHint": "Build the roll tables from the 4e compendium. This creates a Lootbox folder in the Roll Tables tab.",
+      "buildTables": "Build tables",
+      "rebuildTables": "Rebuild",
+      "rebuildTitle": "Rebuild Lootbox Tables",
+      "rebuildConfirm": "Delete and recreate all lootbox tables from the compendium? Edits you made to these tables will be lost.",
+      "building": "Building tables…",
+      "built": "Built {tables} tables with {items} items."
+    },
+    "chat": {
+      "title": "Lootbox · Level {level} · {price}",
+      "boughtBy": "Bought by {name}",
+      "openedFor": "Opened for {name}",
+      "level": "L{level}",
+      "sellsFor": "sells for {gp}",
+      "marketValue": "Market value",
+      "sellValue": "Sell value",
+      "reroll": "Swap: another item of the same kind, rarity and level",
+      "rerollSlot": "Reroll slot: kind, rarity, level and item rolled again",
+      "rerollFirstSlot": "Reroll slot: rarity, level and item rolled again (the first item stays permanent)",
+      "rerolled": "rerolled",
+      "rerolledTimes": "rerolled {count}×"
+    },
+    "verdict": {
+      "loss": "Money-losing",
+      "marketProfit": "Worth more than paid",
+      "sellProfit": "Profit even if sold"
+    },
+    "visibility": {
+      "private": "Private: GMs and the buyer’s players",
+      "gm": "GMs only",
+      "public": "Public"
+    },
+    "rarity": {
+      "common": "Common",
+      "uncommon": "Uncommon",
+      "rare": "Rare"
+    },
+    "kind": {
+      "permanent": "Permanent",
+      "consumable": "Consumable"
+    },
+    "itemType": {
+      "head": "Head",
+      "neck": "Neck",
+      "arms": "Arms (bracers)",
+      "hands": "Hands",
+      "waist": "Waist",
+      "feet": "Feet",
+      "ring": "Ring",
+      "wondrous": "Wondrous item",
+      "potion": "Potion",
+      "elixir": "Elixir",
+      "alchemical": "Alchemical item",
+      "reagent": "Reagent",
+      "whetstone": "Whetstone",
+      "soulfang": "Soulfang",
+      "otherConsumable": "Other (dusts, oils, scrolls…)"
+    },
+    "sceneControl": {
+      "title": "Lootbox"
+    },
+    "errors": {
+      "gmOnly": "Only a GM can open lootboxes or build their tables.",
+      "noTables": "The lootbox tables are missing. Build them from the Lootbox window first.",
+      "missingPack": "Compendium {pack} is not available. Enable the DnD 4e Compendium module.",
+      "emptyPool": "No eligible magic items were found in the 4e compendium.",
+      "notEnoughMoney": "{name} cannot afford this box.",
+      "notRerollable": "This lootbox card cannot be rerolled (it was made before rerolls existed, or the item is gone from it).",
+      "noOtherItem": "No other {rarity} {kind} item of level {level} to replace {item} with.",
+      "slotKeptItem": "Rerolling the slot kept landing on {item}. Try again.",
+      "buyerGone": "The buyer of this box no longer exists, so the item cannot be swapped in their inventory.",
+      "itemGone": "{item} is no longer in {name}’s inventory, so it cannot be swapped for a new item.",
+      "config": {
+        "countWeights": "Item count needs at least one weight above 0.",
+        "extraKindWeights": "Extra item type needs at least one weight above 0.",
+        "rarityWeights": "Rarity needs at least one weight above 0.",
+        "offsetWeights": "Every rarity needs at least one level offset weight above 0.",
+        "weightRange": "Weights must be whole numbers from 0 to 1000.",
+        "sellRatio": "Sell ratios must be between 0% and 100%.",
+        "lossRange": "Money-losing target: min and max must be 0–100% and min ≤ max.",
+        "sellProfitRange": "Profit-if-sold target: min and max must be 0–100% and min ≤ max.",
+        "valueRatio": "Average value target must be between 0 and 10.",
+        "prices": "Every box price must be a whole number of gp above 0.",
+        "priceFactor": "Consumable price cap must be between 1 and 1000.",
+        "typeWeights": "Permanent slots and consumable types each need at least one weight above 0."
+      }
+    },
+    "settings": {
+      "config": {
+        "name": "Lootbox numbers",
+        "label": "Configure",
+        "hint": "Every weight, sell ratio, target and box price the lootbox uses. Saving updates the roll tables."
+      },
+      "chatVisibility": {
+        "name": "Chat card visibility",
+        "hint": "Who sees the lootbox chat card by default. Private whispers it to the GMs and the players who own the buyer; with no buyer it goes to the GMs only. The Lootbox window can change it per box, and a GM can reveal a card later from its chat context menu."
+      }
+    },
+    "config": {
+      "title": "Lootbox Numbers",
+      "intro": "Weights are relative: a table rolls a die the size of their sum, so each weight is that many faces. Saving rewrites the six structural roll tables and reweights the pool tables in place. Box prices do not change by themselves: use “Fit prices to targets” after changing weights, sell ratios or targets.",
+      "weight": "Weight",
+      "chance": "Chance",
+      "items": "{count} item(s)",
+      "count": "Item count",
+      "extraKind": "Extra item type",
+      "extraKindHint": "Rolled for every item after the first; the first item is always permanent.",
+      "rarity": "Rarity",
+      "offset": "Level offset",
+      "offsetHint": "Item level relative to the box level, per rarity (weight 0 = never).",
+      "sellRatio": "Sell ratio (share of the price when sold)",
+      "types": "Item types",
+      "typesHint": "A pool table picks an item type by these weights among the types it holds, then an item of that type, so a slot with many compendium entries is no more likely than one with few. Chance assumes every type is present; where a type has no items at some level and rarity, the others share its part. Weight 0 removes a type from the pools; raising it from 0 again takes a Rebuild.",
+      "untypedPools": "These pool tables were built before item type weights existed, so the weights below are not applied yet and the odds use the tables as they are. Rebuild the tables (Lootbox window) to apply them.",
+      "permanentTypes": "Permanent item slot",
+      "consumableTypes": "Consumable type",
+      "targets": "Target odds",
+      "targetsHint": "Each box level should land inside these ranges; off-target levels show in red below.",
+      "min": "Min",
+      "max": "Max",
+      "loss": "Money-losing",
+      "sellProfit": "Profit if sold",
+      "minValue": "Average value above (× price)",
+      "avgValue": "Avg value",
+      "pool": "Item pool",
+      "priceFactor": "Consumable price cap",
+      "priceFactorHint": "Consumables priced above this multiple of the standard price for their level are left out (the Greenbane entries). Takes effect when the tables are rebuilt.",
+      "prices": "Box prices and odds",
+      "level": "Level",
+      "price": "Price (gp)",
+      "noPool": "Build the lootbox tables to see the odds.",
+      "fixProblems": "Fix the problems below to see the odds.",
+      "allOnTarget": "Every box level meets the target odds.",
+      "offTarget": "{count} box level(s) miss the target odds.",
+      "fit": "Fit prices to targets",
+      "fitting": "Fitting prices…",
+      "fitted": "Prices fitted. Check the odds and save.",
+      "reset": "Reset to defaults",
+      "cancel": "Cancel",
+      "save": "Save",
+      "saved": "Lootbox numbers saved.",
+      "savedSynced": "Lootbox numbers saved and the roll tables updated.",
+      "poolsUntyped": "Item type weights saved, but the pool tables predate them. Rebuild the lootbox tables to apply them.",
+      "restoreTypes": "Rebuild the lootbox tables to bring back items of: {types}.",
+      "poolTablesRemoved": "{count} pool table(s) were deleted because every item in them now has type weight 0."
+    }
+  }
+}

@@ -1,0 +1,26 @@
+export const lootboxTheme = {
+  colourPcHead: "#193d5e",
+  gradient4e: "linear-gradient(270deg, rgba(255, 255, 255, 1) 0%, rgba(221, 220, 203, 1) 100%)",
+  backgroundRowOdd: "#d3d1ba",
+  backgroundRowEven: "#dddcdb",
+  backgroundPanel: "#fafaf7",
+  borderMuted: "#b8b5a0",
+  shadowCard: "0 2px 8px rgba(0, 0, 0, 0.08)",
+  radiusPanel: "6px",
+  radiusControl: "3px",
+  spacingGutter: "12px",
+  colourTextInside: "#484a3d",
+  colourTextOnLight: "#221f1f",
+  colourHeading: "#193d5e",
+  colourAccentOnLight: "#6b5620",
+  colourTextOnDark: "#ffffff",
+  colourLoss: "#8b1e1e",
+  colourMarket: "#6b5620",
+  colourSell: "#1f6b2a",
+  colourCommon: "#5b5b5b",
+  colourUncommon: "#1f6b2a",
+  colourRare: "#1d4f91",
+  fontFamily: '"DragonBodySans", system-ui, sans-serif',
+} as const;
+
+export type LootboxTheme = typeof lootboxTheme;
